@@ -15,5 +15,5 @@ echo "Qual cache deseja testar: [1 ou 2] ";
 read number;
 
 # Rodar a cache desejada e salvar a saida em um arquivo
-#python cache${number}.py >> cache${number}.txt
-python cache${number}.py
+python cache${number}.py >> cache${number}.txt
+

@@ -22,7 +22,6 @@ for line in f:
 
     tag = line[0:8]
     linha = line[8:12]
-    print(linha)
     dec = int(linha,2)
     palavra = line[12:15]
     byte = line[15:16]
