@@ -1,3 +1,7 @@
+# --------------------------------
+# TESTE DE HIT OU MISS DA CACHE 1
+# --------------------------------
+
 class Linha:
     palavras = ['000','001','010','011','100','101','110','111']
     byte = 0
@@ -18,6 +22,7 @@ for line in f:
 
     tag = line[0:8]
     linha = line[8:12]
+    print(linha)
     dec = int(linha,2)
     palavra = line[12:15]
     byte = line[15:16]
