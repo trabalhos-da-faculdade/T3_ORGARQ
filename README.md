@@ -1,5 +1,7 @@
 # TRABALHO 3 DE ORGARQ
 
+![GitHub last commit](https://img.shields.io/github/last-commit/trabalhos-da-faculdade/T3_ORGARQ) ![GitHub language count](https://img.shields.io/github/languages/count/trabalhos-da-faculdade/T3_ORGARQ) ![GitHub top language](https://img.shields.io/github/languages/top/trabalhos-da-faculdade/T3_ORGARQ)
+
 ### Como funciona este Repositorio
 
 * Para testar as _caches_ , utilize o script `compile.sh`
