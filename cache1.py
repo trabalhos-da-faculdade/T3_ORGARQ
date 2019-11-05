@@ -2,28 +2,46 @@
 # TESTE DE HIT OU MISS DA CACHE 1
 # --------------------------------
 
+# Exercicio 1
+#   Mapeamento Direto
+#       10 Bits para tag
+#       3  Bits para linha
+#       2  Bits para palavra
+#       1  Bit para selecao do byte em uma palavra
+#   Cache com 8 Linhas
+#   4 Palavras por Linha
+
+
+
+
+# Criado uma class que sera usado para o teste
 class Linha:
     palavras = ['000','001','010','011','100','101','110','111']
     byte = 0
     tag = ""
     linha = ""
 
+# Lendo o Arquivo onde estao os 8 Bits
 f = open("binary.txt","r")
 
+# Inicialicao do array do Cache
 cache = [None] * 16
 
+# Variaveis hit e miss 
 hit = 0
 miss = 0
 
+# Cada posicao do cache possui a inicializacao da classe Linha
 for x in range (0,16):
     cache[x] = Linha()
 
+# Lendo cada valor de cada linha do arquivo
 for line in f:
 
-    tag = line[0:8]
-    linha = line[8:12]
+    tag = line[0:10]
+    linha = line[11:14]
     dec = int(linha,2)
-    palavra = line[12:15]
+    palavra = line[14:16]
     byte = line[15:16]
 
     if cache[dec].byte == 0 :

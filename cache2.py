@@ -3,13 +3,14 @@
 # -------------------------------
 
 
-
 class Linha:
     palavras = ['000','001','010','011']
     byte = 0
     tag = ""
     linha = ""
 
+
+# Lendo o Arquivo onde estão os 8 Bits
 f = open("binary.txt","r")
 
 cache = [None] * 32
