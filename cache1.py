@@ -16,7 +16,7 @@
 
 # Criado uma class que sera usado para o teste
 class Linha:
-    palavras = ['000','001','010','011','100','101','110','111']
+    palavras = ['0000','0001','0010','0011','0100','0101','0110','0111']
     byte = 0
     tag = ""
     linha = ""
