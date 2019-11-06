@@ -16,8 +16,12 @@ memory = [None] * 264
 hit = 0
 miss = 0
 
-# Counter
+# Counter to position
 count = 0
+
+# Counter to change the value from position
+countToChange = 0
+
 
 # Cada posicao do cache possui a inicializacao da classe Linha
 for x in range (0,16):
@@ -28,8 +32,19 @@ for line in f:
     tag = line[0:13]
     palavra = line[13:15]
     byte = line[15:16]
-
-  # TODO put tag on memory
+    
+    if memory[count] == None :
+        memory[count] = tag
+        print("Miss: " + str(int(line,2)))
+        miss = miss + 1
+        count = count + 1
+    else if memory[count] == tag :
+        print("Hit: " + str(int(line,2)))
+        hit = hit + 1
+        count = count + 1
+    else if 
+    
+    
 
 
 

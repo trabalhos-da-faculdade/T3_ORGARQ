@@ -63,3 +63,6 @@ print("Hits: " + str(hit))
 print("Misses: " + str(miss)) 
 print("Taxa de hits: " + str(round((float(hit) / (hit+miss))*10000) / 100) + "%")
 print("Taxa de misses: " + str(round((float(miss) / (hit+miss))*10000) / 100) + "%")
+
+for i in range(0,16):
+    print(cache[i].linha)
