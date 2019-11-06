@@ -45,24 +45,24 @@ for line in f:
     byte = line[15:16]
 
     if cache[dec].byte == 0 :
-        print("Miss: " + str(int(line,2)))
+        print("Miss;" + str(line))
         miss = miss + 1
         cache[dec].byte = 1
         cache[dec].linha = linha
         cache[dec].tag = tag
     else:
         if cache[dec].tag != tag :
-            print("Miss: " + str(int(line,2)))
+            print("Miss;" + str(line))
             miss = miss + 1
             cache[dec].tag = tag
         else:
-            print("Hit: " + str(int(line,2)))
+            print("Hit;" + str(line))
             hit = hit + 1
 
-print("Hits: " + str(hit))
-print("Misses: " + str(miss)) 
-print("Taxa de hits: " + str(round((float(hit) / (hit+miss))*10000) / 100) + "%")
-print("Taxa de misses: " + str(round((float(miss) / (hit+miss))*10000) / 100) + "%")
+print("Hits;" + str(hit))
+print("Misses;" + str(miss)) 
+print("Taxa de hits;" + str(round((float(hit) / (hit+miss))*10000) / 100) + "%")
+print("Taxa de misses;" + str(round((float(miss) / (hit+miss))*10000) / 100) + "%")
 
-for i in range(0,16):
-    print(cache[i].linha)
+#for i in range(0,16):
+ #   print(str(cache[i].tag) + "" + str(cache[i].palavras) + "" + str(cache[i].byte))

@@ -11,7 +11,7 @@ rm -rf hextobin.txt
 rm -rf binary.txt
 
 # Limpar o arquivo cache1
-rm -rf cache1.txt
+#rm -rf cache1.csv
 
 # Limpar o arquivo cache2
-rm -rf cache2.txt
+rm -rf cache2.csv
