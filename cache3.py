@@ -32,39 +32,36 @@ minValue = -1
 for line in f:
 
     tag = line[0:13]
-    palavra = line[14:16]
-    byte = line[15:16]
-    print("tag: " + tag),
-    print("palavras: " + palavra),
-    print("byte: " + byte)
+    palavra = line[13:15]
+    byte = line[15]
+    #print("tag: " + tag),
+    #print("palavras: " + palavra),
+    #print("byte: " + byte)
 
-    if cache[cacheCount].tag == "":
+    if cacheCount != isFull:
         cache[cacheCount].palavra = line
         cache[cacheCount].tag = tag
         print("Miss;" + str(cache[cacheCount].palavra))
-        miss = miss + 1
-        cacheCount = cacheCount + 1
+        miss += 1
+        cacheCount += 1
     else:
         if cacheCount == isFull:
-                cacheCount = 0
-        
-        else:
-            if cache[cacheCount].palavra == tag:
+            cacheCount = 0
+            if cache[cacheCount].tag == tag:
                 print("Hit;" + str(cache[cacheCount].palavra))
-                hit = hit + 1
-                cache[cacheCount].count = cache[cacheCount].count + 1
-                if minValue > cache[cacheCount].count:
-                    minValue = cache[cacheCount].count
-                    cacheCount = cacheCount + 1
+                print("Hit Counter: " + str(cache[cacheCount].count))
+                hit += 1
+                cache[cacheCount].count += 1
+            if minValue > cache[cacheCount].count:
+                minValue = cache[cacheCount].count
+                cacheCount += 1
                 
-            else:
-                if cache[cacheCount].count < minValue and cache[cacheCount] != None:
-                    cache[cacheCount].tag = tag
-                    cache[cacheCount].palavra = palavra
-                    cache[cache].count  = -1
-                    print("Miss;" + str(cache[cacheCount].palavra))
-                    miss = miss + 1
-# TODO make this array start again
+            if cache[cacheCount].count < minValue:
+                cache[cacheCount].tag = tag
+                cache[cacheCount].palavra = palavra
+                cache[cache].count  = -1
+                print("Miss;" + str(cache[cacheCount].palavra))
+                miss += 1
 
 
 
